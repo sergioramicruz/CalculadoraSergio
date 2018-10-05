@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/operaciones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="monospace"
+                android:text="@string/operaciones"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pantalla"
+                android:layout_width="373dp"
+                android:layout_height="match_parent"
+                android:fontFamily="monospace"
+                android:text="@string/pantalla"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintBottom_toTopOf="@+id/tablaOperaciones"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/operaciones" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tablaOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="305dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:stretchColumns="*"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/errores"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pantalla">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/botonMemoria"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="verMemoria"
+                    android:text="@string/memoria"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar3"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/botonMemoriaMas"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="agregarMemoria"
+                    android:text="@string/memoriamas"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar3"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/botonMemoriaBorrar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botones2"
+                    android:onClick="borrarMemoria"
+                    android:text="@string/memoriaborrar"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar3"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/botonBorrarPantalla"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botones2"
+                    android:onClick="borrarPantalla"
+                    android:text="@string/botonborrarpantalla"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar3"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/boton7"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/siete"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton8"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/ocho"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton9"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/nueve"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonDividir"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="operador"
+                    android:text="@string/botondividir"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar2"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/boton6"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/seis"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton5"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/cinco"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton4"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/cuatro"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonMultiplicar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="operador"
+                    android:text="@string/botonmultiplicar"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar2"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/boton3"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/tres"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/dos"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boton1"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/uno"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonRestar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="operador"
+                    android:text="@string/botonrestar"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar2"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="320dp">
+
+                <Button
+                    android:id="@+id/boton0"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:text="@string/zero"
+                    android:onClick="verValor"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonPunto"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones1"
+                    android:onClick="verValor"
+                    android:text="@string/botonpunto"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar1"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonBorrar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="borrar"
+                    android:text="@string/botonborrar"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+                    android:textColor="@drawable/boton_pulsar3"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/botonSumar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:onClick="operador"
+                    android:text="@string/botonsumar"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar2"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/botonAbrir"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:text="@string/botonabrir"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonCerrar"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/botones2"
+                    android:text="@string/botoncerrar"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/botonResultado"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/boton_igual"
+                    android:onClick="operacion"
+                    android:text="@string/botonresultado"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/boton_pulsar2"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/errores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false"
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tablaOperaciones" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">CalculadoraSergio</string>
+    <string name="dos">2</string>
+    <string name="operaciones"></string>
+    <string name="pantalla">0</string>
+    <string name="memoria">ME</string>
+    <string name="memoriamas">M+</string>
+    <string name="memoriaborrar">MC</string>
+    <string name="botonborrarpantalla">AC</string>
+    <string name="botonborrar">C</string>
+    <string name="botonabrir">(</string>
+    <string name="botoncerrar">)</string>
+    <string name="siete">7</string>
+    <string name="ocho">8</string>
+    <string name="nueve">9</string>
+    <string name="botondividir">%</string>
+    <string name="seis">6</string>
+    <string name="cinco">5</string>
+    <string name="cuatro">4</string>
+    <string name="botonmultiplicar">x</string>
+    <string name="tres">3</string>
+    <string name="uno">1</string>
+    <string name="botonrestar">-</string>
+    <string name="zero">0</string>
+    <string name="botonpunto">·</string>
+    <string name="botonsumar">+</string>
+    <string name="botonresultado">=</string>
+    <string name="botona">A</string>
+    <string name="botonb">B</string>
+    <string name="botonc">C</string>
+    <string name="botond">D</string>
+    <string name="botone">E</string>
+    <string name="botonf">F</string>
+</resources>
