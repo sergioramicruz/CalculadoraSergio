@@ -196,32 +196,6 @@ class MainActivity : AppCompatActivity() {
         acumulado = resultado;
     }
 
-    fun operacionHex(v : View){
-
-        when(operador){
-
-            "+"->{
-                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
-                pantalla.setText(java.lang.Integer.toHexString(totalHex))
-            }
-
-            "-"->{
-                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
-                pantalla.setText(java.lang.Integer.toHexString(totalHex))
-            }
-
-            "*"->{
-                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
-                pantalla.setText(java.lang.Integer.toHexString(totalHex))
-            }
-
-            "/"->{
-                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
-                pantalla.setText(java.lang.Integer.toHexString(totalHex))
-            }
-        }
-    }
-
     fun operadorHex(v : View){
 
         when(v.id){
@@ -248,6 +222,32 @@ class MainActivity : AppCompatActivity() {
                 resultadoHex = java.lang.Long.parseLong(pantalla.text.toString(), 16).toString()
                 pantalla.setText("")
                 operador = "/"
+            }
+        }
+    }
+
+    fun operacionHex(v : View){
+
+        when(operador){
+
+            "+"->{
+                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
+                pantalla.setText(java.lang.Integer.toHexString(totalHex))
+            }
+
+            "-"->{
+                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
+                pantalla.setText(java.lang.Integer.toHexString(totalHex))
+            }
+
+            "*"->{
+                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
+                pantalla.setText(java.lang.Integer.toHexString(totalHex))
+            }
+
+            "/"->{
+                totalHex = resultadoHex.toInt() + java.lang.Long.parseLong(pantalla.text.toString(), 16).toInt()
+                pantalla.setText(java.lang.Integer.toHexString(totalHex))
             }
         }
     }
